@@ -9,7 +9,7 @@ public class Main {
         //Sistema de gestion de E/S de vehiculos en un parking
         //1. carritos:
         //Objetos(instancias)
-        //Tipo de clase 
+        //Tipo de clase
         //2. nombre del objeto
         //3. asignacion y new
         //4. constructor
