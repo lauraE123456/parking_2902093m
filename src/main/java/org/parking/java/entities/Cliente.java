@@ -9,10 +9,10 @@ public class Cliente {
     //1. modificador de acceso
     //2. tipo de dato del atributo
     //3. nombre del atributo
-    public String nombre;
-    public String apellidos;
-    public Long numIdentificacion;
-    public List<Vehiculo> misVehiculos = new ArrayList<Vehiculo>();
+    private String nombre;
+    private String apellidos;
+    private Long numIdentificacion;
+    private List<Vehiculo> misVehiculos = new ArrayList<Vehiculo>();
    
 
     public Cliente() {
@@ -33,9 +33,36 @@ public class Cliente {
     //addVehicle
     public void addVehicle (String placa, TipoVehiculo tv){
         Vehiculo v= new Vehiculo();
-        v.placa = placa;
-        v.tipoVehiculo = tv;
+        //utilizando el setter de placa pñara asignar el valor de placa
+        //al nuevo vehiculo
+        v.setPlaca(placa);
+        v.setTipoVehiculo(tv);
         this.misVehiculos.add(v);
     }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getApellidos() {
+        return apellidos;
+    }
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public Long getNumIdentificacion() {
+        return numIdentificacion;
+    }
+    public void setNumIdentificacion(Long numIdentificacion) {
+        this.numIdentificacion = numIdentificacion;
+    }
+    public List<Vehiculo> getMisVehiculos() {
+        return misVehiculos;
+    }
+    public void setMisVehiculos(List<Vehiculo> misVehiculos) {
+        this.misVehiculos = misVehiculos;
+    }
+    
 
 }

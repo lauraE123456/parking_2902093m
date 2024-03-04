@@ -24,12 +24,22 @@ public class Main {
         Vehiculo carrito1 = new Vehiculo("ASD 789", TipoVehiculo.PARTICULAR );
 
         Vehiculo carrito2 = new Vehiculo("DAS 987", TipoVehiculo.CAMIONETA);
+        
+        Vehiculo motico = new Vehiculo();
+        motico.setPlaca("XSE 342");
+        motico.setTipoVehiculo(TipoVehiculo.MOTO);
 
 
         //crear(instanciar) un cliente
         Cliente cliente1 = new Cliente("Miguel","Ortiz Neira",124421421L);
 
         Cliente cliente2 = new Cliente("Samuel","Ardila Salvador", 101960553l);
+
+        Cliente cliente3 = new Cliente();
+        cliente3.setNombre("Laura");
+        cliente3.setApellidos("Albarracin");
+        cliente3.setNumIdentificacion(1014198965L);
+        
 
          //invocar el metodo
         cliente1.addVehicle(carrito1);
@@ -42,7 +52,9 @@ public class Main {
 
         //intancia de empleado
         Empleado empleado1 = new Empleado("Steven", "Rodriguez", 1);
-
+        Empleado empleado2 = new Empleado();
+        empleado2.setNombres(null);
+        empleado2.setApellidos(null);
         //CREAR FECHAS
         LocalDateTime fechaHoraInicio = LocalDateTime.of(2024,Month.FEBRUARY, 1, 15, 30, 0);
 
@@ -63,12 +75,10 @@ public class Main {
             //evidencia:
             //mostrar:
             //placa del vehiculo - valor pagado - fecha y hora de inicio - fecha y hora fin - cupo(nombre)
-            System.out.println( "Pago |Placa: " + p.vehiculo.placa + "|" );
-            System.out.println( "|valor:" + p.valor + "|");
-            System.out.println("|fecha y hora de entrada:" + p.fechaHoraInicio.toString() + "|");
-            System.out.println("|Fecha y hora de fin: "  + p.fechaHoraFin.toString() + "|");
-            System.out.println("|Cupo:" + p.cupo.nombre + "|");
-            System.out.println("|Empleado: " + p.empleado.codigo + "|");
+            System.out.println( "Pago |Placa: " + p.getVehiculo().getPlaca() + "|" +
+                                "|valor:" + p.getValor() + "|"+
+                                p.getFechaHoraInicio().ge);
+
         }
         
 }
